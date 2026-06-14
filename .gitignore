@@ -1,0 +1,83 @@
+# Environment variables - NEVER commit to Git
+.env
+.env.local
+.env.*.local
+*.env
+
+# Backend
+backend/.env
+backend/venv/
+backend/env/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.pyc
+backend/**/*.pyc
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
+backend/dist/
+backend/build/
+backend/*.egg-info
+backend/data/
+backend/models/
+backend/*.log
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+frontend/.env.*.local
+frontend/npm-debug.log
+frontend/yarn-error.log
+
+# IDE
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+.env.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+.tmp/
+temp/
+*.tmp
+
+# Credentials and secrets
+secrets/
+.credentials
+*.pem
+*.key
+*.crt
+
+# Reference files
+reference/*
+
+## Additional local & secret ignores
+# Top-level and nested virtualenvs
+venv/
+**/venv/
+
+# Common cloud/SDK credential files and local key files
+.aws/credentials
+openai*.key
+
+# Ignore for local development
+docker-compose.yml
