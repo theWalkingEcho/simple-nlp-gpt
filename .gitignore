@@ -81,3 +81,4 @@ openai*.key
 
 # Ignore for local development
 docker-compose.yml
+Dockerfile
