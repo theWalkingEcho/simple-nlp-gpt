@@ -68,7 +68,7 @@ secrets/
 *.crt
 
 # Reference files
-reference/*
+references/*
 
 ## Additional local & secret ignores
 # Top-level and nested virtualenvs
