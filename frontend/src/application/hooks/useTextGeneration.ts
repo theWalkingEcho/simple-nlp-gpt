@@ -3,7 +3,7 @@
  * Presentation Layer - handles UI state management
  */
 import { useState, useCallback } from 'react';
-import { TextPrediction } from '../domain/models';
+import { TextPrediction } from '../../domain/models';
 
 interface UseTextGenerationState {
   prediction: TextPrediction | null;

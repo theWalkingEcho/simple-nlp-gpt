@@ -72,6 +72,7 @@ references/*
 
 ## Additional local & secret ignores
 # Top-level and nested virtualenvs
+.venv/
 venv/
 **/venv/
 
@@ -80,5 +81,6 @@ venv/
 openai*.key
 
 # Ignore for local development
-docker-compose.yml
-Dockerfile
+# (keep project Docker files tracked)
+# docker-compose.yml
+# Dockerfile
