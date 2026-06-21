@@ -7,7 +7,7 @@ from ..infrastructure.nlp.tokenizer import SimpleTokenizer, ITokenizer
 from ..infrastructure.repositories import InMemoryPredictionRepository
 from ..domain.repositories import PredictionRepository
 from .use_cases import GenerateTextUseCase, GetPredictionHistoryUseCase, GetPredictionUseCase
-from ...config.config import NLPConfig
+from config.config import NLPConfig
 
 
 class DIContainer:

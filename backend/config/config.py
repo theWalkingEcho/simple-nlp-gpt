@@ -2,8 +2,8 @@
 Configuration management following SOLID principles
 """
 import os
-from dataclasses import dataclass
-from typing import Optional
+from dataclasses import dataclass, field
+from typing import Optional, List
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -35,7 +35,7 @@ class APIConfig:
     """API configuration"""
     API_VERSION: str = os.getenv("API_VERSION", "v1")
     API_PREFIX: str = f"/api/{API_VERSION}"
-    CORS_ORIGINS: list = os.getenv("CORS_ORIGINS", "http://localhost:3000").split(",")
+    CORS_ORIGINS: List[str] = field(default_factory=lambda: os.getenv("CORS_ORIGINS", "http://localhost:3000").split(","))
 
 
 @dataclass
