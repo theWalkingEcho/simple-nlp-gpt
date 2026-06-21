@@ -1,7 +1,7 @@
 /**
  * Main App Component
  */
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { HomePage } from './presentation/pages/Home';
 import { initializeDIContainer } from './application/diContainer';
 import './App.css';

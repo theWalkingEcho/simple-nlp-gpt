@@ -3,8 +3,8 @@
  * Business logic for text generation
  * Single Responsibility - handles one use case
  */
-import { ITextGenerationService } from '../../infrastructure/services/textGenerationService';
-import { GenerateRequest, TextPrediction, GenerateResponse } from '../../domain/models';
+import { ITextGenerationService } from '../infrastructure/services/textGenerationService';
+import { GenerateRequest, TextPrediction } from '../domain/models';
 
 export interface IGenerateTextUseCase {
   execute(request: GenerateRequest): Promise<{ prediction: TextPrediction; predictionId: string }>;

@@ -4,7 +4,7 @@
  * Following Dependency Inversion - depends on abstractions
  */
 import axios, { AxiosInstance } from 'axios';
-import { GenerateRequest, GenerateResponse, PredictionHistoryResponse, TextPrediction } from '../domain/models';
+import { GenerateRequest, GenerateResponse, PredictionHistoryResponse, TextPrediction } from '../../domain/models';
 
 export interface ITextGenerationService {
   generateText(request: GenerateRequest): Promise<GenerateResponse>;

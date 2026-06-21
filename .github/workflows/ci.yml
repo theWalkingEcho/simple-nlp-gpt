@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install backend dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          python -m pip install --upgrade pip
+          python -m pip install -r backend/requirements.txt
+      - name: Run backend tests
+        run: |
+          source .venv/bin/activate
+          python -m pytest backend/tests -q
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '21'
+      - name: Install frontend dependencies
+        run: npm install
+      - name: Run frontend lint
+        run: npm run lint
+      - name: Run frontend build
+        run: npm run build
